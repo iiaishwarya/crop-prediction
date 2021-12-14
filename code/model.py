@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import os
 from time import time
 
-from util import evaluate_model  
+from util import evaluate_model 
 
 alpha = 1e-6
 
@@ -33,9 +33,9 @@ dir_ = 'results/%s'\
 if not os.path.exists(dir_):
     os.makedirs(dir_)
     
-train_metrics = evaluate_model (x_train, yield_train, y_train, states_train, 'train', dir_, model)
-val_metrics = evaluate_model (x_val, yield_val, y_val, states_val, 'val', dir_, model)
-test_metrics = evaluate_model (x_test, yield_test, y_test, states_test, 'test', dir_, model)
+train_metrics = evaluate_model(x_train, yield_train, y_train, states_train, 'train', dir_, model)
+val_metrics = evaluate_model(x_val, yield_val, y_val, states_val, 'val', dir_, model)
+test_metrics = evaluate_model(x_test, yield_test, y_test, states_test, 'test', dir_, model)
 
 # Lasso
 model = Lasso(alpha = alpha, random_state = 1)
@@ -46,9 +46,9 @@ dir_ = 'results/%s'\
             %('lasso')
 if not os.path.exists(dir_):
     os.makedirs(dir_)
-train_metrics = evaluate_model (x_train, yield_train, y_train, states_train, 'train', dir_, model)
-val_metrics = evaluate_model (x_val, yield_val, y_val, states_val, 'val', dir_, model)
-test_metrics = evaluate_model (x_test, yield_test, y_test, states_test, 'test', dir_, model)
+train_metrics = evaluate_model(x_train, yield_train, y_train, states_train, 'train', dir_, model)
+val_metrics = evaluate_model(x_val, yield_val, y_val, states_val, 'val', dir_, model)
+test_metrics = evaluate_model(x_test, yield_test, y_test, states_test, 'test', dir_, model)
 
 # SVR
 model = SVR(kernel = 'rbf', epsilon = 0.1)
@@ -59,9 +59,9 @@ dir_ = 'results/%s'\
             %('svr_rbf')
 if not os.path.exists(dir_):
     os.makedirs(dir_)
-train_metrics = evaluate_model (x_train, yield_train, y_train, states_train, 'train', dir_, model)
-val_metrics = evaluate_model (x_val, yield_val, y_val, states_val, 'val', dir_, model)
-test_metrics = evaluate_model (x_test, yield_test, y_test, states_test, 'test', dir_, model)
+train_metrics = evaluate_model(x_train, yield_train, y_train, states_train, 'train', dir_, model)
+val_metrics = evaluate_model(x_val, yield_val, y_val, states_val, 'val', dir_, model)
+test_metrics = evaluate_model(x_test, yield_test, y_test, states_test, 'test', dir_, model)
 
 # MLP
 model = MLPRegressor(solver='lbfgs', alpha=alpha,
@@ -74,9 +74,9 @@ dir_ = 'results/%s'\
 if not os.path.exists(dir_):
     os.makedirs(dir_)
 
-train_metrics = evaluate_model (x_train, yield_train, y_train, states_train, 'train', dir_, model)
-val_metrics = evaluate_model (x_val, yield_val, y_val, states_val, 'val', dir_, model)
-test_metrics = evaluate_model (x_test, yield_test, y_test, states_test, 'test', dir_, model)
+train_metrics = evaluate_model(x_train, yield_train, y_train, states_train, 'train', dir_, model)
+val_metrics = evaluate_model(x_val, yield_val, y_val, states_val, 'val', dir_, model)
+test_metrics = evaluate_model(x_test, yield_test, y_test, states_test, 'test', dir_, model)
 
 #LSTM
 shape = x_train.shape[2] 
@@ -120,6 +120,6 @@ dir_ = 'results/%s'\
 if not os.path.exists(dir_):
     os.makedirs(dir_)
 
-train_metrics = evaluate_model (x_train, yield_train, y_train, states_train, 'train', dir_, model)
-val_metrics = evaluate_model (x_val, yield_val, y_val, states_val, 'val', dir_, model)
-test_metrics = evaluate_model (x_test, yield_test, y_test, states_test, 'test', dir_, model)
+train_metrics = evaluate_model(x_train, yield_train, y_train, states_train, 'train', dir_, model)
+val_metrics = evaluate_model(x_val, yield_val, y_val, states_val, 'val', dir_, model)
+test_metrics = evaluate_model(x_test, yield_test, y_test, states_test, 'test', dir_, model)
