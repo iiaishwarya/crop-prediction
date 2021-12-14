@@ -4,8 +4,8 @@ import tensorflow
 
 tensorflow.random.set_seed(2)
 
-def get_data(data_x, data_x_mg_cluster):
+def get_data(data_x, cluster):
     data_x = data_x
-    data_x_mg_cluster = data_x_mg_cluster
+    cluster = cluster
     
-    return data_x, data_x_mg_cluster
+    return data_x, cluster
